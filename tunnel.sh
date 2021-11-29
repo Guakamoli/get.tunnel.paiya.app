@@ -33,10 +33,12 @@ fi
 
 if [ "$TUNNEL_FILE" != "" ];then
   cd /tmp
-  curl -L -# "${BASEURL}/${TUNNEL_FILE}" -o "/tmp/$TUNNEL_FILE"
+  rm -rf $TUNNEL_FILE
+  TUNNEL_BIN="/tmp/${TUNNEL_PATH}/tunnel"
+  curl -L -# "${BASEURL}/${TUNNEL_FILE}" -o $TUNNEL_FILE
   tar -xvf $TUNNEL_FILE
-  chmod +x "$TUNNEL_PATH/tunnel"
-  mv $TUNNEL_PATH "/usr/local/bin"
+  chmod +x $TUNNEL_BIN
+  mv $TUNNEL_BIN "/usr/local/bin"
   rm -rf $TUNNEL_PATH
   echo "install success!"
 fi
