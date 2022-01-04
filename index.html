@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running as root"
+    exit
+fi
+
 _exists() {
   cmd="$1"
   if [ -z "$cmd" ] ; then
