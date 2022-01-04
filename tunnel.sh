@@ -2,6 +2,12 @@
 
 # https://github.com/Guakamoli/get.tunnel.paiya.app
 
+# 检查 root 权限运行（需要移动文件至 **/usr/local/bin**）
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running as root"
+    exit
+fi
+
 VERSION="0.0.1"
 
 BASEURL="https://github.com/Guakamoli/get.tunnel.paiya.app/releases/download/v${VERSION}"
