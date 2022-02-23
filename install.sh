@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-VERSION="0.1.0"
+VERSION="0.1.1"
 
 BASEURL="https://github.com/Guakamoli/get.tunnel.paiya.app/releases/download/v${VERSION}"
 TUNNEL_FILE=""
