@@ -13,8 +13,12 @@ if [[ "$arch" = *86_64 ]];then
   TUNNEL_ARCH="amd64"
 elif [[ "$arch" = i*86 ]];then
   TUNNEL_ARCH="386"
-else
-  echo "暂时没时间写arm架构的判断"
+elif [[ "$arch" =~ "ARM64" ]];then
+  TUNNEL_ARCH="arm64"
+fi
+
+if [[ "$TUNNEL_ARCH" == "" ]];then
+  echo "Unsupported arch"
   exit 0
 fi
 
@@ -38,5 +42,5 @@ if [ "$TUNNEL_FILE" != "" ];then
   chmod +x $TUNNEL_BIN
   mv $TUNNEL_BIN "/usr/local/bin"
   rm -rf $TUNNEL_PATH
-  echo "install success!"
+  echo "tunnel Install Success!"
 fi
