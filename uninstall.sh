@@ -3,7 +3,7 @@
 TUNNEL_BIN="/usr/local/bin/tunnel"
 
 if [ -f "$TUNNEL_BIN" ];then
-    echo "install success!"
+    echo "Uninstall Success!"
     rm -rf $TUNNEL_BIN
 fi
 
