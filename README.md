@@ -17,6 +17,12 @@ sudo sh -c "$(curl -fsSL https://get.tunnel.paiya.app)"
 sudo HTTPS_PROXY=你的代理链接 sh -c "$(curl -fsSL https://get.tunnel.paiya.app)"
 ```
 
+### 卸载
+
+```bash
+sudo sh -c "$(curl -fsSL https://get.tunnel.paiya.app/uninstall.sh)"
+```
+
 ## link
 
 [github.com/Guakamoli/tunnel](https://github.com/Guakamoli/tunnel)
