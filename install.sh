@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION="0.1.2"
+VERSION=$(curl -fsSL https://get.tunnel.paiya.app/version)
 
 BASEURL="https://github.com/Guakamoli/get.tunnel.paiya.app/releases/download/v${VERSION}"
 TUNNEL_FILE=""
