@@ -17,6 +17,15 @@ sudo sh -c "$(curl -fsSL https://get.tunnel.paiya.app)"
 sudo HTTPS_PROXY=你的代理链接 sh -c "$(curl -fsSL https://get.tunnel.paiya.app)"
 ```
 
+## 使用
+
+联系管理员([flxxyz](https://github.com/flxxyz)) 开通权限
+
+```shell
+# 首先将管理员创建的用户标记写入到本地配置文件中
+echo '唯一的用户标记' > ~/.tunnel
+```
+
 ### 卸载
 
 ```bash
